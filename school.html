@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+
+
+<head>
+<title>school</title>
+<link rel="stylesheet" href="new_form.html">
+<style>
+ul {
+  list-style-type: none;
+  margin: 0;
+  padding: 0;
+  overflow: hidden;
+  background-color: black;
+}
+
+li {
+  float: left;
+}
+
+li a {
+  display: block;
+  color: white;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+}
+
+li a:hover:not(.active) {
+  background-color: grey;
+}
+
+.active {
+  background-color: grey;
+}
+img{ vertical-align: middle; }
+.container { position: relative; }
+.myslides { display : none }
+.cursor { cursor: pointer; }
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 40%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+/* Position the "next button" to the right */
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+/* On hover, add a black background color with a little bit see-through */
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Number text (1/3 etc) */
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  position: absolute;
+  top: 0;
+}
+
+/* Container for image text */
+.caption-container {
+  text-align: center;
+  background-color: #222;
+  padding: 2px 16px;
+  color: white;
+}
+
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Six columns side by side */
+.column {
+  float: left;
+  width: 16.66%;
+}
+
+/* Add a transparency effect for thumnbail images */
+.demo {
+  opacity: 0.6;
+}
+
+.active,
+.demo:hover {
+  opacity: 1;
+}
+
+</style>
+</head>
+<body>
+<center><h3 style="background-color: black; color: white;"><span>&#9993;</span>youremail@gmail.com<span>     &#9743;</span> +91 99 99 999 999 </h4>
+<div  style="background-color: ">
+<table>
+<tr><td><img src="logo.jpeg" style="width: 50%; height: 50%;"></td>
+<td><h1 style="font-family: Georgia; text-align: left;">Your School Name Here.</h1>
+</td></tr>
+</table>
+</div>
+
+<ul>
+  <li><a href="#home">
+Home</a></li>
+  <li><a href="#admission"> Admission</a></li>
+  <li><a href="#courses">Courses</a></li>
+<li><a href="file:///C:/Users/Mubarak/Desktop/new_form.html">login</li>
+  <li style="float:right"><a class="active" href="#about">About</a></li>
+</ul>
+
+<h2 style="text-align:center">School Gallary</h2>
+
+<div class="container">
+  <div class="mySlides">
+    <div class="numbertext">1 / 6</div>
+<img src="class.jpeg" style="width:100%">
+    
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">2 / 6</div>
+    <img src="pray.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">3 / 6</div>
+    <img src="school1.png"  >
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">4 / 6</div>
+    <img src="students.jpeg" style="width:100%">
+  </div>
+
+  <div class="mySlides">
+    <div class="numbertext">5 / 6</div>
+    <img src="draw.jpeg" style="width:100%">
+  </div>
+    
+  <div class="mySlides">
+    <div class="numbertext">6 / 6</div>
+    <img src="ground.jpeg" style="width:100%">
+  </div>
+    
+  <a class="prev" onclick="plusSlides(-1)">?</a>
+  <a class="next" onclick="plusSlides(1)">?</a>
+
+  <div class="caption-container">
+    <p id="caption"></p>
+  </div>
+
+  <div class="row">
+    <div class="column">
+      <img class="demo cursor" src="class.jpeg" style="width: 100%" onclick="currentSlide(1)" alt="your school name">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="pray.jpeg" style="width:100%" onclick="currentSlide(2)" alt="your school name">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="school1.png" style="width:100%" onclick="currentSlide(3)" alt="your school name">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="students.jpeg" style="width:100%" onclick="currentSlide(4)" alt="your school name">
+    </div>
+    <div class="column">
+      <img class="demo cursor" src="draw.jpeg" style="width:100%" onclick="currentSlide(5)" alt="your school name">
+    </div>    
+    <div class="column">
+      <img class="demo cursor" src="ground.jpeg" style="width:100%" onclick="currentSlide(6)" alt="your school name">
+    </div>
+  </div>
+</div>
+
+<script>
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) {
+  showSlides(slideIndex += n);
+}
+
+function currentSlide(n) {
+  showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+  var i;
+  var slides = document.getElementsByClassName("mySlides");
+  var dots = document.getElementsByClassName("demo");
+  var captionText = document.getElementById("caption");
+  if (n > slides.length) {slideIndex = 1}
+  if (n < 1) {slideIndex = slides.length}
+  for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+  }
+  for (i = 0; i < dots.length; i++) {
+      dots[i].className = dots[i].className.replace(" active", "");
+  }
+  slides[slideIndex-1].style.display = "block";
+  dots[slideIndex-1].className += " active";
+  captionText.innerHTML = dots[slideIndex-1].alt;
+}
+</script>
+    
+<h1 > Facilities</h1>
+<table width="100%" height="50%" border="1" >
+<tr>
+<th >Activities</th>
+<td>CBSE/ICSE</td>
+</tr>
+<tr>
+<th>Age Group</th>
+<td>3-16</td>
+</tr>
+<tr>
+<th>Air Conditioned classes</th>
+<td>Yes/No</td>
+</tr>
+<tr>
+<th>Average Fees</th>
+<td>-</td>
+</tr>
+<tr>
+<th>Board Affiliation</th>
+<td>-</td>
+</tr>
+<tr>
+<th>Classes Offered</th>
+<td>-</td>
+</tr>
+<tr>
+<th>Extra Curriculam Activities</th>
+<td>-</td>
+</tr>
+<tr>
+<th>Bus Facilities</th>
+<td>-</td>
+</tr>
+<tr>
+<th>School Timing</th>
+<td>-</td>
+</tr>
+<tr>
+<th>Sport Facilities</th>
+<td>-</td>
+</tr>
+<tr>
+<th>Smart Classrooms</th>
+<td>-</td>
+</tr>
+</table>
+<h1 style="background-color: black; color:white"> Meet Our Faculties</h1>
+<table>
+<tr><td><img src="teacher1.jpeg" style="border-radius: 50%">
+<h4>Name</h4>
+<p>About</p>
+</td>
+<td><img src="teacher2.jpeg" style="border-radius:50%">
+<center><h4>Name></h4>
+<p>About</p></center></td>
+<td><img src="teacher3.jpeg" style="border-radius: 50%">
+<h4>Name</h4>
+<p>About</p></td>
+</tr>
+</table>
+</body>
+
+</html>
